@@ -8,3 +8,4 @@ flask-jwt-extended
 passlib~=1.7.4
 flask-migrate
 alembic~=1.11.2
+gunicorn
