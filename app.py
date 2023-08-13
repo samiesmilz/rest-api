@@ -4,6 +4,7 @@ from flask_smorest import Api
 from flask_jwt_extended import JWTManager
 from db import db
 from models import BlockListModel
+from dotenv import load_dotenv
 from flask_migrate import Migrate
 from resources.item import blp as ItemBlueprint
 from resources.store import blp as StoreBlueprint
@@ -13,6 +14,7 @@ from resources.user import blp as UserBlueprint
 
 def create_app(db_url=None):
     app = Flask(__name__)
+    load_dotenv()
 
     # Other config
     app.config["PROPAGATE EXCEPTIONS"] = True
